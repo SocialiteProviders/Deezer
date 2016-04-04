@@ -83,7 +83,6 @@ class Provider extends AbstractProvider implements ProviderInterface
 
         $response = file_get_contents($url);
 
-
         $this->credentialsResponseBody = json_decode($response->getBody(), true);
 
         return $this->parseAccessToken($response->getBody());
